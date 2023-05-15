@@ -3,24 +3,26 @@
 <!-- INICIO DE LA BARRA DE ARRIBA -->
 <div class="container">
   <div class="topBar">
-    <img class="logo" src="assets/logocompleto.png"> 
+    <img class="logo" src="assets/Bemba.png"> 
     <div class="buttons">   
     <button class=" mobile-only">Nuevo Botón</button>
     <button (click)="scrollToStart()" class="button">Inicio</button>
     <button (click)="scrollToUs()" class="button">Conocenos</button>
     <button (click)="scrollToFQA()" class="button">Preguntas</button>
+    <button (click)="scrollToHab()" class="button">Equipación</button>
 
   </div>
   </div>
-
 </div>
 <!-- FIN DE LA BARRA DE ARRIBA -->
 
 <!-- INICIO DE EL VIDEO -->
 <section id="video">
 <div class="video-container"> 
-   <video autoplay muted loop class="video">
-  <source src="assets/video.mp4" type="video/mp4">
+   <video loop class="video" oncanplay="this.play()" onloadedmetadata="this.muted=true" >
+  <source src="assets/videoRosas.mp4" type="video/mp4" loading="lazy">  
+
+  <p>Lo sentimos, este video no es compatible con tu navegador o dispositivo.</p>
   </video>
   <div class="intro-cont">
   <h2 class="Encabezado">No lo dudes más, vive la grata
@@ -38,14 +40,14 @@
   <div class="container-1">
     <div class="wrappers">
       <div class="image-container">
-        <img src="assets/kathe.png" >
+        <img src="assets/nuevaOP.jpeg"  loading="lazy">
       </div>
       <div class="intro-contenedor">
          <h2 class="intral">
           ¿Quienes somos? 
          </h2>
          <p>
-          Somos una empresa que tiene sus orígenes en apartado en febrero de 2020 con el fin de brindar calidad de vida a sus colaboradores y mejorar la experiencia a sus usuarios.
+          Somos una empresa que tiene sus orígenes en Apartadó-Urabá en febrero de 2020 con el fin de brindar calidad de vida a sus colaboradores y mejorar la experiencia a sus usuarios.
 
           Como aliados tenemos a Hmstudios y Jbstudios 
           
@@ -65,15 +67,27 @@
     <div class="container-1">
       <h2> FQA </h2>
       <p class="preg">Preguntas Frecuentes que nos hacen</p>
-      <div class="answers">
+      <div class="answers">      
+          <div class="flip-card">
+          <div class="flip-card-inner">
+              <div class="flip-card-front">
+                  <p class="title">¿Qué se necesita para ser modelo de webcam?</p>
+                  <p class="COQUETO">FQA</p>
+              </div>
+              <div class="flip-card-back">
+                  <p class="title">A TÍ</p>
+                  <p>Se necesita solo disciplina y animo, con el tiempo se irá dando las cosas con constancia</p>
+              </div>
+          </div>
+        </div>
         <div class="flip-card">
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Bloqueamos Colombia?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
-                  <p class="title">Es opcional</p>
+                  <p class="title"> <span>Es opcional </span> </p>
                   <p>Sí se puede bloquear cualquier país en específico que la modelo quiera bloquear</p>
               </div>
           </div>
@@ -82,7 +96,7 @@
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Estoy obligada a desnudarme?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
                   <p class="title">NO</p>
@@ -94,7 +108,7 @@
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Cómo hago para ganar mucho dinero?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
                   <p class="title">Depende</p>
@@ -106,7 +120,7 @@
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Cómo es el método de pago en las plataformas?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
                   <p class="title">Token</p>
@@ -118,7 +132,7 @@
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Qué tan seguro es trabajar con plataformas?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
                   <p class="title">seguro</p>
@@ -130,7 +144,7 @@
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Tengo supervision o ayuda al momento de transmitir?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
                   <p class="title">SÍ</p>
@@ -142,7 +156,7 @@
           <div class="flip-card-inner">
               <div class="flip-card-front">
                   <p class="title">¿Qué me brindan como estudio?</p>
-                  <p>FQA</p>
+                  <p class="COQUETO">FQA</p>
               </div>
               <div class="flip-card-back">
                   <p class="title">Comodidad</p>
@@ -150,18 +164,7 @@
               </div>
           </div>
         </div>
-        <div class="flip-card">
-          <div class="flip-card-inner">
-              <div class="flip-card-front">
-                  <p class="title">¿Qué se necesita para ser modelo de webcam?</p>
-                  <p>FQA</p>
-              </div>
-              <div class="flip-card-back">
-                  <p class="title">A TÍ</p>
-                  <p>Se necesita solo disciplina y animo, con el tiempo se irá dando las cosas con constancia</p>
-              </div>
-          </div>
-        </div>
+
       </div>
 
     </div>
@@ -169,35 +172,131 @@
 </section>
 
 <!-- FIN DE FQA -->
-<!-- INICIO DE travel-->
 
-<section id="travel">
-  <div class="travel-wraper">
-    <div class="slider-container">
-      <h2 class="headTravel"> Integraciones</h2>
 
-      <div class="slider-frame">
-        <ul>
-          <li><img src="assets/Slider1.jpg" ></li>
-          <li><img src="assets/Slider2.jpg" ></li>
-          <li><img src="assets/Slider5.jpeg" ></li>
-          <li><img src="assets/Slider4.jpg" ></li>
-        </ul>
+<!-- TRAVEL PERO BOTONES -->
+<section class="travel-wraper" id="inte">
+  <div class="slider-wrapper">
+    <h2 class="headTravel"> Integraciones</h2>
+    <p>Hacemos viajes de integraciones con nuestras modelos, vamos a diversos lugares y hacemos actividades lúdicas y divertidas</p>
+
+    <div class="slider">
+      <img id="slider1" src="assets/Slider1.jpg" loading="lazy">
+      <img id="slider2" src="assets/Slider2.jpg" loading="lazy">
+      <img id="slider3" src="assets/Slider3.jpeg" loading="lazy">
+      <img id="slider4" src="assets/Slider4.jpg" loading="lazy">
+      <img id="slider5" src="assets/Slider5.webp" loading="lazy">
+      <img id="slider6" src="assets/Slider6.jpeg" loading="lazy">
+      <img id="slider7" src="assets/Slider7.webp" loading="lazy">
+    </div>
+    <div class="slider-n">
+      <a href="#slider1" (click)="updateIndex(6)"></a>
+      <a href="#slider2" (click)="updateIndex(6)"></a>
+      <a href="#slider3" (click)="updateIndex(6)"></a>
+      <a href="#slider4" (click)="updateIndex(6)"></a>
+      <a href="#slider5" (click)="updateIndex(6)"></a>
+      <a href="#slider6" (click)="updateIndex(6)"></a>
+      <a href="#slider7" (click)="updateIndex(6)"></a>
+
+
+    </div>
+  </div>
+</section>
+<!-- TRAVEL PERO BOTONES -->  
+<!-- inicio de Capacitaciones -->
+<section id="capa" class="cap">
+  <div class="cap-wrapper">
+    <div class="container-1">
+      <h2>Capacitaciones</h2>
+      <p>Capacitamos a nuestras modelos webcam con modelos profesionales y exitosas en la industria</p>
+
+      <div class="Photos">
+        <div class="Box">
+          <img src="assets/Capa1OP.webp" alt="" loading="lazy">
+          <div class="descripcion">
+          <p>Tenemos Acompañamientos con profesionales en la industria que ayudan a nuestras modelos, así como <span>Linda Suárez</span>  acerca del publico y demás.</p>
+         </div>
+        </div>
+        <div class="Box">
+          <img src="assets/Capa2.webp" alt="" loading="lazy">
+          <div class="descripcion">
+          <p> Nuestras modelos cuentan con viajes y reuniones para compartir sus experiencias y aprender de las mejores en entornos adecuados.</p>
+         </div>
+        </div>
+        <div class="Box">
+          <img src="assets/Capa3.webp" alt="" loading="lazy">
+          <div class="descripcion">
+          <p> Aprenden el manejo de juguetes y el uso adecuado de ellos, además del publico, capacitamos a nuestras modelos para ser las mejores.</p>
+         </div>
+        </div>
+        <div class="Box">
+          <img src="assets/Capa4.webp" alt="" loading="lazy">
+          <div class="descripcion">
+          <p>Comparten entre compañeras, aprenden experiencias mientras disfrutan sus viajes y capacitaciones.</p>
+         </div>
+        </div>
+        <div class="Box">
+          <img src="assets/Capa5.webp" alt="" loading="lazy">
+          <div class="descripcion">
+          <p>Tambien capacitamos a nuestros monitores para así tener monitores de calidad y así estén mejor preparados</p>
+         </div>
+        </div>
+     
+     
+
+      </div>
+  
+    </div>
+
+  </div>  
+  
+</section>
+<!-- fin de Capacitaciones -->
+<!-- INICIO HABITACIONES -->
+
+<section id="habita">
+  <div class="habita-wrap">
+    <div class="container-1">
+      <h2>Equipos de Trabajo</h2>
+      <p>Contamos con habitaciones bien equipadas para nuestras modelos, preparamos todo al nivel para siempre mantener a nuestras modelos en lo profesional</p>
+      <div class="habita-video">
+        <video controls >
+          <source src="assets/Habitac.mp4" type="video/mp4" loading="lazy">  
+          <p>Lo sentimos, este video no es compatible con tu navegador o dispositivo.</p>
+        </video>
+              
       </div>
     </div>
   </div>
 </section>
-<!-- Fin DE travel-->
+<!-- FIN HABITACIONES -->
 
-
+  
 <!-- INICIO DE LA BARRA DE ABAJO -->
-
-<div class="container">
+<section id="downBar">
+<div class="down-wrapper">
+ 
+  <div class="info">
+    <h3>Contacto</h3>
+    <p>
+      +57 311 4139374   <br>
+      +57 312 7084205 <br>
+      wowestudiowebcam@gmail.com<br>
+      Apartadó Urabá Antioquia<br>
+    </p>
+    <h3>Estudios</h3>
+    <p>
+      Wow studio<br>
+      HM studio<br>
+      JB studio
+    </p>
+  </div>
  <div class="downBar">
-  <img class="logoDown" src="assets/logocompleto.png">
-  <p class="letter">© All rights reserved. Wowstudios, 2023.</p>
+      <img src="assets/logocompleto.png" >
+      <p>© All rights reserved. Wowstudios, 2023.</p>
+  </div>
 </div>
-</div>
+</section>
 <!-- FIN DE LA BARRA DE ABAJO -->
 
 <!-- INICIO DE BOTONES DE REDES -->
@@ -206,7 +305,7 @@
 
     <div class="social-links">
 
-      <a href="https://wa.me/+573114139374?text=Hola,%20me%20interesó%20lo%20de%20ser%20modelo" target="_blank" class="whatsapp">
+      <a href="https://wa.me/+573114139374?text=Hola,%20me%20interesó%20la%20pagina%20Web%20de%20WowStudio,%20me%20gustaría%20consultar%20para%20tener%20más%20información" target="_blank" class="whatsapp">
       <div id="whatsapp" class="social-btn flex-center">
         <svg viewBox="0 0 24 24" height="30" width="30" xmlns="http://www.w3.org/2000/svg">
             <image href="assets/whatsapp.png" height="24" width="24" />
@@ -250,5 +349,7 @@
 
   </div> 
   <!-- FIN DE BOTONES DE REDES -->
+
+
 </body>
 
